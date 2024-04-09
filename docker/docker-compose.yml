@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  tomcat:
+    container_name: tomcat_dev_container
+    build:
+      context: ./java
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - type: bind
+        source: ../
+        target: /usr/local/tomcat/webapps/sample:cached
+    tty: true

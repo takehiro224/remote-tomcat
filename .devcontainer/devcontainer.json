@@ -1,0 +1,7 @@
+{
+    "name": "tomcat",
+    "dockerComposeFile": ["../docker/docker-compose.yml"],
+    "service": "tomcat",
+    "workspaceFolder": "/usr/local/tomcat",
+    "extensions": ["vscjava.vscode-java-pack"]
+}
