@@ -1,5 +1,8 @@
 FROM tomcat:jdk17
 
+# tomcatのホットリロードを有効化(開発時のみ利用する)
+COPY server.xml /usr/local/tomcat/conf/server.xml
+
 # antをインストール
 RUN apt-get update && apt-get install -y ant
 
