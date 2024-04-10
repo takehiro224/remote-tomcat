@@ -22,4 +22,15 @@
         <servlet-name>HelloServletMapping</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+      <servlet-name>SampleServletMapping</servlet-name>
+      <servlet-class>SampleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SampleServletMapping</servlet-name>
+        <url-pattern>/sample</url-pattern>
+    </servlet-mapping>
+    
+
 </web-app>
