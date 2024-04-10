@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+  version="6.0"
+  metadata-complete="true">
+
+    <description>
+      Servlet and JSP Examples.
+    </description>
+    <display-name>Servlet and JSP Examples</display-name>
+
+    <request-character-encoding>UTF-8</request-character-encoding>
+
+    <servlet>
+      <servlet-name>HelloServletMapping</servlet-name>
+      <servlet-class>HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServletMapping</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+</web-app>
