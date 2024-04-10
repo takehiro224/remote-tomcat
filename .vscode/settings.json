@@ -1,7 +1,26 @@
 {
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin",
+    "java.compileOnSave": true,
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
-    ]
+        "lib/**/*.jar",
+        "/usr/local/tomcat/lib/*.jar"
+    ],
+    "java.compile": {
+        "enabled": true,
+        "options": "-d ${fileDirname} ${file}"
+    },
+    "java.projectSourcePath": "WEB-INF/classes",
+    "java.projectOutputPath": "WEB-INF/classes",
+    "java.projectDependencies": [
+        {
+            "name": "Ant",
+            "path": "/usr/share/ant/lib"
+        }
+    ],
+    "java.buildTools": [
+        {
+            "name": "Ant",
+            "args": ["-f", "build.xml"]
+        }
+    ],
+    "java.debug.settings.hotCodeReplace": "auto"
 }
