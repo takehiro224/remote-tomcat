@@ -3,5 +3,8 @@
     "dockerComposeFile": ["../docker/docker-compose.yml"],
     "service": "tomcat",
     "workspaceFolder": "/usr/local/tomcat",
-    "extensions": ["vscjava.vscode-java-pack"]
+    "extensions": [
+        "redhat.vscode-community-server-connector",
+        "vscjava.vscode-java-pack"
+    ]
 }
