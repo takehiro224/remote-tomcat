@@ -1,0 +1,23 @@
+<project name="MyWebApp" default="compile" basedir=".">
+    <!-- ソースディレクトリ -->
+    <property name="src.dir" value="WEB-INF/classes"/>
+    <!-- コンパイルされたクラスファイルの出力先ディレクトリ -->
+    <property name="build.dir" value="WEB-INF/classes"/>
+    <property name="lib.dir" value="/usr/local/tomcat/lib"/>
+    <!-- クラスパス -->
+    <path id="classpath">
+        <fileset dir="${lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    <!-- コンパイルターゲット -->
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <!-- <javac srcdir="${src.dir}" destdir="${build.dir}" classpath="${lib.dir}/servlet-api.jar"/> -->
+        <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="classpath"/>
+    </target>
+    <!-- デフォルトターゲット -->
+    <target name="default" depends="compile">
+        <!-- ここにビルドが完了した後の追加の処理を追加 -->
+    </target>
+</project>
