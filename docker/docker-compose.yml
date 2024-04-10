@@ -9,7 +9,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - type: bind
-        source: ../
-        target: /usr/local/tomcat/webapps/sample:cached
+      - '..:/usr/local/tomcat/webapps/sample:cached'
+      # - type: bind
+      #   source: ../
+      #   target: /usr/local/tomcat/webapps/sample:cached #なぜかこの記載方法だとcachedが有効にならない
     tty: true
