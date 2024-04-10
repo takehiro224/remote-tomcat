@@ -13,7 +13,6 @@
     <!-- コンパイルターゲット -->
     <target name="compile">
         <mkdir dir="${build.dir}"/>
-        <!-- <javac srcdir="${src.dir}" destdir="${build.dir}" classpath="${lib.dir}/servlet-api.jar"/> -->
         <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="classpath"/>
     </target>
     <!-- デフォルトターゲット -->
